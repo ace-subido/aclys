@@ -1,0 +1,33 @@
+<configuration>
+  <appender name="ANSI-STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <withJansi>true</withJansi>
+    <encoder>
+      <pattern>%yellow(%date) %highlight(%level) - %green(%logger{0}) %magenta([%thread]): %white(%msg%n)
+      </pattern>
+    </encoder>
+  </appender>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <withJansi>true</withJansi>
+    <encoder>
+      <pattern>%date %level - %logger{0} [%thread]: %msg%n
+      </pattern>
+    </encoder>
+  </appender>
+  <appender name="FILE"
+    class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- daily rollover -->
+      <fileNamePattern>recorder.%d{yyyy-MM-dd}.log</fileNamePattern>
+      <!-- keep 30 days' worth of history -->
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%date %level - %logger{0} [%thread]: %msg%n</pattern>
+    </encoder>
+  </appender>
+  <root level="info">
+    <!-- <appender-ref ref="FILE" /> -->
+    <!-- <appender-ref ref="STDOUT" /> -->
+    <appender-ref ref="ANSI-STDOUT" />
+  </root>
+</configuration>

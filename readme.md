@@ -10,6 +10,7 @@ I've been immersed with Scala at the company I work with, this is a small experi
 - I thought of doing something "Redis-like" for thick Javascript Apps
 - All in a single file under 90 lines of code
 - Not meant for Production. Doesn't even have authentication. Not as fast as Redis or Memcache (100k read/write HTTP requests with 5 concurrent clients are around 1450-1500 requests per second over localhost)
+- "So it's running on HTTP? Do I need a web server". Aclys is built on top of Finagle, no web server needed. Setting it up to run on Heroku is [easy](https://devcenter.heroku.com/articles/scala). Setting it up to run on your computer is easy as well, just install **sbt** and run: **sbt run** in the base directory.
 
 There's only one method in Aclys
 

@@ -1,6 +1,6 @@
 ###Aclys
 
-A small experimental in-memory key/value store built on top of Finagle. 
+A tiny experimental in-memory key/value store on top of Finagle. 
 
 ###Notes 
 
@@ -9,15 +9,21 @@ I've been immersed with Scala at the company I work with, this is a small experi
 - Built on top of Finagle, it's accessed through HTTP (GET, POST, DELETE. Refer to Usage section for more info)
 - I thought of doing something "Redis-like" for thick Javascript Apps
 - All in a single file under 90 lines of code
-- Not meant for Production. Doesn't even have authentication. Not as fast as Redis or Memcache (read/write HTTP requests are around 1450-1500 requests per second over localhost)
+- Not meant for Production. Doesn't even have authentication. Not as fast as Redis or Memcache (100k read/write HTTP requests with 5 concurrent clients are around 1450-1500 requests per second over localhost)
 
-There's only three methods with Aclys
+There's only one method in Aclys
+
+	/?key=
+
+This method is A RESTful interface:
 
 	GET		Returns the value based on the Key
 	DELETE	Deletes the value based on the Key
 	POST	Creates a value based on the Key, the value should be passed through the Request Body (value not in JSON)
 
-If the key doesn't exist, or is not provided Aclys will return a 404.
+If the key doesn't exist or is not provided, Aclys will return a 404.
+
+> Aclys - a **small** javelin
 
 ###License
 

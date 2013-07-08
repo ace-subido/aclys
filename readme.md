@@ -4,13 +4,13 @@ A tiny experimental in-memory key/value store on top of Finagle.
 
 ###Notes 
 
-I've been immersed with Scala at the company I work with, this is a small experiment I embarked myself into in order to understand some key concepts in Scala:
+I've been immersed with Scala at the where I work, this is a small experiment I embarked myself into in order to understand some key concepts in Scala:
 
-- Built on top of Finagle, it's accessed through HTTP (GET, POST, DELETE. Refer to Usage section for more info)
-- I thought of doing something "Redis-like" for thick Javascript Apps
+- Built on top of Finagle, it's a tiny-little In-memory NoSQL key/value store accessed through HTTP (GET, POST, DELETE. Refer to Usage section for more info)
+- It's something "Redis-like" for thick Javascript Apps
 - All in a single file under 90 lines of code
-- Not meant for Production. Doesn't even have authentication. Not as fast as Redis or Memcache (100k read/write HTTP requests with 5 concurrent clients are around 1450-1500 requests per second over localhost)
-- "So it's running on HTTP? Do I need a web server". Aclys is built on top of Finagle, no web server needed. Setting it up to run on Heroku is [easy](https://devcenter.heroku.com/articles/scala). Setting it up to run on your computer is easy as well, just install **sbt** and run: **sbt run** in the base directory.
+- Not meant for Production. Doesn't even have authentication. Not as fast as Redis or Memcache (100k read/write HTTP requests with 5 concurrent clients are around 1450-1510 requests per second over localhost)
+- "So I can access it on HTTP? Do I need a web server?". Aclys is built on top of Finagle, no web server needed. Setting it up to run on Heroku is [easy](https://devcenter.heroku.com/articles/scala). Setting it up to run on your computer is easy as well, clone the repo, install **sbt** and run: **sbt run** in the base directory.
 
 There's only one method in Aclys
 

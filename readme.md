@@ -2,11 +2,12 @@
 
 A tiny experimental in-memory key/value store on top of Finagle. 
 
+------------
 ###Notes 
 
 I've been immersed with Scala at the where I work, this is a small experiment I embarked myself into in order to understand some key concepts in Scala:
 
-- Built on top of Finagle, it's a tiny-little In-memory NoSQL key/value store accessed through HTTP (GET, POST, DELETE. Refer to Usage section for more info)
+- An experiment on top of Finagle, accessed through HTTP (GET, POST, DELETE. Refer to Usage section for more info)
 - It's something "Redis-like" for thick Javascript Apps
 - All in a single file under 90 lines of code
 - Not meant for Production. Doesn't even have authentication. Not as fast as Redis or Memcache (100k read/write HTTP requests with 5 concurrent clients are around 1450-1510 requests per second over localhost)
@@ -39,4 +40,4 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ###Author
 
-I'm Ace Subido, (UI/UX) Founding Team Member at Orchestrack.
+I'm [Ace Subido](http://acesubido.com), (UI/UX) Founding Team Member at Orchestrack.

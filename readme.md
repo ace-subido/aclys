@@ -23,7 +23,7 @@ This method is A RESTful interface:
 
 If the key doesn't exist or is not provided, Aclys will return a 404.
 
-> Aclys - a **small** javelin
+> Aclys (Latin) - a **small** javelin
 
 ###License
 
